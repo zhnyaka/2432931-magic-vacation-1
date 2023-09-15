@@ -87,12 +87,15 @@
 }
 
 .intro__message {
+  margin-top: 15px;
   flex: none;
   width: 50.9rem;
   max-width: 50%;
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.27;
+  opacity: 0;
+  transition: all 0.3s ease-in;
 
   @media (min-width: $stop-scaling) {
     width: 509px;
@@ -160,5 +163,11 @@
   @media (min-width: $stop-scaling) {
     margin: 0 0 0 -5px;
     font-size: 48px;
+  }
+}
+.screen--intro.active {
+  .intro__message {
+    margin-top: 0;
+    opacity: 1;
   }
 }
