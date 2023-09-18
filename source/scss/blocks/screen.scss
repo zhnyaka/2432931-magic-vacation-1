@@ -360,3 +360,16 @@
     bottom: 0;
   }
 }
+.screen__fon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: #5f458c;
+  transition: all 0.5s;
+  z-index: 5;
+}
+.screen__fon.active {
+  height: 100%;
+}
