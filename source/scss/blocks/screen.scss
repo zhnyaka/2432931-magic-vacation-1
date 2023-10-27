@@ -40,7 +40,7 @@
 
 .screen__footer {
   position: absolute;
-  bottom: -35;
+  bottom: -40px;
   left: 0;
   right: 0;
   color: $c-dark;
@@ -355,10 +355,8 @@
 .screen--rules {
   background-color: $c-dark;
 }
-.is-load {
-  .screen__footer {
-    bottom: 0;
-  }
+.is-load .screen.active .screen__footer {
+  bottom: 0
 }
 .screen__fon {
   position: absolute;
