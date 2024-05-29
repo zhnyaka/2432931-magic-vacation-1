@@ -39,18 +39,88 @@
     right: -1rem;
   }
 
-  picture {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
   img {
+    position: absolute;
     display: block;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     object-position: center;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.3s;
+  }
+}
+.result {
+  &__flamingo {
+    top: 47.5%;
+    left: 33.2%;
+    width: 19%;
+    height: auto;
+    z-index: 3;
+    animation-name: flamingo;
+  }
+  &__leaf-blue-1 {
+    top: 37%;
+    left: 50%;
+    width: 19.5%;
+    height: auto;
+    z-index: 0;
+    animation-name: leafBlue;
+  }
+  &__leaf-blue-2 {
+    top: 51%;
+    left: 26%;
+    width: 19.5%;
+    height: auto;
+    z-index: 0;
+    animation-name:leafBlue;
+  }
+  &__leaf-green {
+    top: 56.4%;
+    left: 48%;
+    width: 22.5%;
+    height: auto;
+    z-index: 1;
+    animation-name:leaf;
+  }
+  &__suitcase {
+    top: 37%;
+    left: 35.5%;
+    width: 24%;
+    height: auto;
+    z-index: 2;
+    animation-name:suitcase;
+  }
+}
+@keyframes suitcase {
+  0% {
+    transform: translate(0, 200%) scale(0);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes flamingo {
+  0% {
+    transform: translate(0, 200%);
+  }
+  100% {
+    transform: translate(0, 0%)
+  }
+}
+@keyframes leafBlue {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes leaf {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

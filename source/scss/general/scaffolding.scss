@@ -99,3 +99,51 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.accent-typography > span {
+  padding: 0 2px;
+  margin-top: -3%;
+  padding-top: 3%;
+  overflow: hidden;
+  display: inline-flex;
+  span {
+    // margin: 0 -0.003em;
+    display: block;
+    transform: translateY(100%);
+    animation-fill-mode: both;
+    animation-name: accentTypography;
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.5, 0.9);
+    animation-duration: 0.7s;
+    &:nth-child(3n) {
+      animation-delay: 0.1s;
+    }
+    &:nth-child(3n - 2) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3n - 1) {
+      animation-delay: 0.3s;
+    }
+  }
+  &:nth-child(2) {
+    span {
+      &:nth-child(3n) {
+        animation-delay: 0.5s;
+      }
+      &:nth-child(3n - 2) {
+        animation-delay: 0.6s;
+      }
+      &:nth-child(3n - 1) {
+        animation-delay: 0.7s;
+      }
+    }
+  }
+}
+
+@keyframes accentTypography {
+  from {
+    transform: translateY(120%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
